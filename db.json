@@ -1,74 +1,11 @@
 {
   "tasks": [
     {
-      "id": 1,
-      "title": "First Task",
-      "category": "34sd45twfer",
-      "status": "INCOMPLETE",
-      "createdDate": "2019-06-10T12:05:39.904Z"
-    },
-    {
-      "id": 2,
-      "title": "Second Task",
-      "category": "4jh54t45",
-      "status": "COMPLETE",
-      "createdDate": "2019-06-10T12:05:39.904Z"
-    },
-    {
-      "title": "Something",
-      "category": "4jh54t45",
-      "id": "g2pc01ltgjwsbfdlh",
-      "status": "INCOMPLETE",
-      "createdDate": "2019-06-11T21:26:38.740Z"
-    },
-    {
-      "title": "Something",
-      "category": "awer54ytdf4",
-      "id": "g2pc01ltxjwsbtrlm",
-      "status": "INCOMPLETE",
-      "createdDate": "2019-06-11T21:37:50.073Z"
-    },
-    {
       "title": "New Task",
-      "category": "awer54ytdf4",
-      "id": "g2pc01ltxjwsc6fww",
-      "status": "INCOMPLETE",
-      "createdDate": "2019-06-11T21:47:41.456Z"
-    },
-    {
-      "title": "Another New Task",
-      "category": "34sd45twfer",
-      "id": "g2pc01ltxjwsc6u9h",
-      "status": "INCOMPLETE",
-      "createdDate": "2019-06-11T21:48:00.053Z"
-    },
-    {
-      "title": "New Task...",
       "category": "4jh54t45",
-      "id": "g2pc01ltxjwscj16p",
+      "id": "g2pc01mpijwses4ag",
       "status": "INCOMPLETE",
-      "createdDate": "2019-06-11T21:57:28.897Z"
-    },
-    {
-      "title": "Tes...",
-      "category": "4jh54t45",
-      "id": "g2pc01ltxjwsck244",
-      "status": "INCOMPLETE",
-      "createdDate": "2019-06-11T21:58:16.756Z"
-    },
-    {
-      "title": "asdfasdfad",
-      "category": "4jh54t45",
-      "id": "g2pc01ltxjwscovtf",
-      "status": "INCOMPLETE",
-      "createdDate": "2019-06-11T22:02:01.875Z"
-    },
-    {
-      "title": "ASdfasdfgasdfasdfasda",
-      "category": "awer54ytdf4",
-      "id": "g2pc01ltxjwscp8j0",
-      "status": "INCOMPLETE",
-      "createdDate": "2019-06-11T22:02:18.348Z"
+      "createdDate": "2019-06-11T23:00:32.055Z"
     }
   ],
   "categories": [

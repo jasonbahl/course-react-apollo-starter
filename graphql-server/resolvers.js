@@ -31,6 +31,14 @@ export const resolvers = {
                category: categoryId
            });
            return {task}
+       },
+       deleteTask: async (_, { id } ) => {
+           return await TasksModel.getTaskById(id).then(task => {
+               TasksModel.deleteTask(id);
+               return task;
+           }).then( task => {
+               return { deletedId: task.id }
+           });
        }
     },
     Task: {

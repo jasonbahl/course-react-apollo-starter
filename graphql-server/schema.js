@@ -7,6 +7,11 @@ type Query {
 type Mutation {
  toggleTaskStatus(id: ID! currentStatus: TaskStatusEnum!): ToggleTaskPayload
  createTask(title:String! categoryId:ID!): CreateTaskPayload 
+ deleteTask(id:ID!): DeleteTaskPayload
+}
+
+type DeleteTaskPayload {
+  deletedId: ID
 }
 
 type CreateTaskPayload {
