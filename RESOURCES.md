@@ -20,6 +20,7 @@ https://github.com/jasonbahl/course-react-apollo-starter
   - https://www.apollographql.com/docs/apollo-server/
 - *GraphQL*: https://graphql.org/
 - *JSON Server*: https://github.com/typicode/json-server
+- *Apollo Error Handling*: https://www.apollographql.com/docs/react/features/error-handling/
 
 ## :pencil: Articles
 
@@ -29,3 +30,9 @@ https://github.com/jasonbahl/course-react-apollo-starter
   - https://blog.bitsrc.io/apollo-and-relay-side-by-side-adb5e3844935
 - *Schema Design*: https://blog.apollographql.com/explaining-graphql-connections-c48b7c3d6976
 - *GraphQL vs REST*: https://blog.apollographql.com/graphql-vs-rest-5d425123e34b
+- *Apollo Batch Queries*: https://blog.apollographql.com/batching-client-graphql-queries-a685f5bcd41b
+
+## :electric_plug: Extensions
+
+- *Apollo Link Logger (client)*: https://www.npmjs.com/package/apollo-link-logger
+- *Apollo Logs (server)*: https://www.npmjs.com/package/apollo-log
