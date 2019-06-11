@@ -19,6 +19,13 @@ export const resolvers = {
             return await CategoryModel.getCategories();
         }
     },
+    Mutation: {
+       toggleTaskStatus: async ( _, { id, currentStatus } ) => {
+            const status = currentStatus === 'INCOMPLETE' ? 'COMPLETE' : 'INCOMPLETE';
+            const task = await TasksModel.updateTask( id, { status });
+            return {task}
+       }
+    },
     Task: {
         taskStatus: (task, args, context, info) => {
             return task.status;
