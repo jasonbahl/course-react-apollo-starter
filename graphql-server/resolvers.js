@@ -18,5 +18,13 @@ export const resolvers = {
         taskCategories: async () => {
             return await CategoryModel.getCategories();
         }
+    },
+    Task: {
+        taskStatus: (task, args, context, info) => {
+            return task.status;
+        },
+        category: async (task, args, context, info) => {
+            return await CategoryModel.getCategoryById(task.category)
+        }
     }
-}
+};

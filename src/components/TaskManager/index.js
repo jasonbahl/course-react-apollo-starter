@@ -1,9 +1,16 @@
-import React, { Fragment } from "react"
+import React, { Component } from "react"
+import NewTaskForm from '../NewTaskForm'
+import TaskFilters from '../TaskFilters'
+import TaskList from '../TaskList'
 
-const TaskManager = () => (
-  <div>
-    <h1>Task Manager!</h1>
-  </div>
-)
+const TaskManager = () => {
+    return(
+        <div>
+            <NewTaskForm/>
+            <TaskFilters/>
+            <TaskList/>
+        </div>
+    );
+};
 
-export default TaskManager
+export default TaskManager;
