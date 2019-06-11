@@ -24,6 +24,13 @@ export const resolvers = {
             const status = currentStatus === 'INCOMPLETE' ? 'COMPLETE' : 'INCOMPLETE';
             const task = await TasksModel.updateTask( id, { status });
             return {task}
+       },
+       createTask: async (_, { title, categoryId } ) => {
+           const task = await TasksModel.createTask({
+               title,
+               category: categoryId
+           });
+           return {task}
        }
     },
     Task: {
@@ -31,7 +38,7 @@ export const resolvers = {
             return task.status;
         },
         category: async (task, args, context, info) => {
-            return await CategoryModel.getCategoryById(task.category)
+            return task.category ? await CategoryModel.getCategoryById(task.category) : null;
         }
     }
 };
