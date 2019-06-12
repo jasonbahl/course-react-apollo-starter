@@ -5,7 +5,7 @@ type Query {
 }
 
 input TaskFilters { 
-  categoryId: ID
+  category: ID
   status: TaskStatusEnum
 }
 
@@ -37,6 +37,7 @@ type Task {
 enum TaskStatusEnum {
   INCOMPLETE
   COMPLETE
+  ALL
 }
 
 type TaskCategory {

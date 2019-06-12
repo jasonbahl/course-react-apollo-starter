@@ -1,18 +1,11 @@
 {
   "tasks": [
     {
-      "title": "Tasks",
-      "category": "4jh54t45",
-      "id": "g2pc01mpijwseuviv",
+      "title": "Another Task",
+      "category": "awer54ytdf4",
+      "id": "g2pc01ni6jwshakry",
       "status": "INCOMPLETE",
-      "createdDate": "2019-06-11T23:02:40.663Z"
-    },
-    {
-      "title": "New Task",
-      "category": "34sd45twfer",
-      "id": "g2pc01ni6jwsgwcug",
-      "status": "INCOMPLETE",
-      "createdDate": "2019-06-11T23:59:48.999Z"
+      "createdDate": "2019-06-12T00:10:52.462Z"
     }
   ],
   "categories": [

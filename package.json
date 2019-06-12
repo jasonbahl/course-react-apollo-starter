@@ -3,9 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "^4.1.0",
     "@reach/router": "^1.2.1",
     "antd": "^3.13.6",
-    "apollo-cache-inmemory": "1.2.10",
+    "apollo-cache-inmemory": "1.6.2",
     "apollo-client": "2.4.2",
     "apollo-link": "1.2.3",
     "apollo-link-batch-http": "^1.2.11",
@@ -26,7 +27,8 @@
     "react": "16.5.2",
     "react-apollo": "2.1.11",
     "react-dom": "16.5.2",
-    "react-scripts": "1.1.5",
+    "react-scripts": "3.0.1",
+    "react-test-renderer": "^16.8.6",
     "subscriptions-transport-ws": "0.9.15",
     "uniqid": "^5.0.3"
   },
@@ -57,31 +59,39 @@
     "inspect-graphql-server": "node --inspect-brk ./graphql-server-dist/index",
     "start-graphql-server:debug-exec": "run-s build-graphql-server inspect-graphql-server",
     "start-rest-server-exec": "cross-env-shell json-server --port=$PORT --static node_modules/json-server/dist db.json",
-    "test": "react-scripts test --env=jsdom",
-    "test:debug": "react-scripts --inspect-brk test --runInBand --env=jsdom",
-    "format": "prettier --write \"src/**/*.js\""
+    "format": "prettier --write \"src/**/*.js\"",
+    "test": "react-scripts test --env=jsdom"
   },
   "devDependencies": {
     "babel-cli": "6.26.0",
     "babel-preset-env": "1.7.0",
     "chokidar-cli": "1.2.1",
     "cross-env": "5.2.0",
-    "enzyme": "3.6.0",
-    "enzyme-adapter-react-16": "1.5.0",
-    "eslint": "5.6.0",
-    "eslint-plugin-import": "2.14.0",
-    "eslint-plugin-jsx-a11y": "6.1.1",
-    "eslint-plugin-node": "7.0.1",
+    "enzyme": "3.8.0",
+    "enzyme-adapter-react-16": "1.9.1",
+    "eslint-plugin-import": "2.16.0",
+    "eslint-plugin-jsx-a11y": "6.2.1",
+    "eslint-plugin-node": "8.0.1",
     "eslint-plugin-promise": "4.0.1",
-    "eslint-config-google": "^0.10.0",
-    "eslint-config-prettier": "^3.1.0",
-    "eslint-plugin-flow-vars": "^0.5.0",
-    "eslint-plugin-react": "^7.11.1",
+    "eslint-plugin-react": "7.12.4",
     "eslint-plugin-standard": "4.0.0",
-    "json-server": "0.14.0",
-    "node-sass-chokidar": "1.3.3",
-    "nodemon": "1.18.4",
-    "npm-run-all": "4.1.3",
-    "waait": "1.0.2"
+    "json-server": "0.14.2",
+    "node-fetch": "2.3.0",
+    "node-sass-chokidar": "1.3.4",
+    "nodemon": "1.18.10",
+    "npm-run-all": "4.1.5",
+    "waait": "1.0.4"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

@@ -5,11 +5,17 @@ import apolloLogger from "apollo-link-logger"
 import { split, ApolloLink } from "apollo-link"
 import { WebSocketLink } from "apollo-link-ws"
 import { getMainDefinition } from "apollo-utilities"
-import { clientStateLink } from "./localState"
+import { withClientState } from "apollo-link-state"
 
 const GRAPHQL_PORT = process.env.REACT_APP_GRAPHQL_PORT || 3010
 
-export const cache = new InMemoryCache()
+const cache = new InMemoryCache()
+
+const clientStateLink = withClientState({
+  cache,
+  defaults: {},
+  resolvers: {},
+})
 
 const batchHttpLink = new BatchHttpLink({
   uri: `http://localhost:${GRAPHQL_PORT}/graphql`,

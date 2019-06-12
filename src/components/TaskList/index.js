@@ -5,8 +5,8 @@ import { List } from "antd"
 import TaskItem, { TaskItemFragment } from "../TaskItem"
 
 export const TASKS_QUERY = gql`
-  query TASKS_QUERY {
-    tasks {
+  query TASKS_QUERY($filters: TaskFilters) {
+    tasks(filters: $filters) {
       id
       ...TaskItem
     }
@@ -14,11 +14,14 @@ export const TASKS_QUERY = gql`
   ${TaskItemFragment}
 `
 
-const TaskList = () => (
-  <Query query={TASKS_QUERY}>
+const TaskList = ({ filters }) => (
+  <Query
+    query={TASKS_QUERY}
+    variables={{ filters: filters }}
+    fetchPolicy="network-only"
+  >
     {({ loading, error, data }) => {
       if (error) {
-        console.log(`Error ${error.message}`)
       }
 
       return (
@@ -26,10 +29,10 @@ const TaskList = () => (
           loading={loading}
           style={{ background: `white` }}
           bordered
-          dataSource={data.tasks}
+          dataSource={data && data.tasks ? data.tasks : []}
           renderItem={task => (
             <List.Item key={task.id}>
-              <TaskItem task={task} />
+              <TaskItem filters={filters} task={task} />
             </List.Item>
           )}
         />

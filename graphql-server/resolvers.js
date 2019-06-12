@@ -10,8 +10,7 @@ import { TasksModel, CategoryModel } from './models'
 
 export const resolvers = {
     Query:  {
-        tasks: async () => {
-            const filters = {};
+        tasks: async (_, { filters = {} }) => {
             const res = await TasksModel.getTasks(filters);
             return res.tasks;
         },
