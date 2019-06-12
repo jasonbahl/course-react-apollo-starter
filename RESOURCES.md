@@ -32,7 +32,7 @@ https://github.com/jasonbahl/course-react-apollo-starter
 - *Schema Design*: https://blog.apollographql.com/explaining-graphql-connections-c48b7c3d6976
 - *GraphQL vs REST*: https://blog.apollographql.com/graphql-vs-rest-5d425123e34b
 - *Apollo Batch Queries*: https://blog.apollographql.com/batching-client-graphql-queries-a685f5bcd41b
-
+- *Apollo Raises Funding (June 2019)*: https://blog.apollographql.com/apollo-raises-22-million-to-simplify-app-development-ee30502c81b3
 
 ## :electric_plug: Extensions
 
