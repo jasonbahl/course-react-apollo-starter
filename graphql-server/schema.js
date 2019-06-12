@@ -1,7 +1,12 @@
 export const typeDefs = `
 type Query {
-  tasks: [Task]
+  tasks( filters:TaskFilters ): [Task]
   taskCategories: [TaskCategory]
+}
+
+input TaskFilters { 
+  categoryId: ID
+  status: TaskStatusEnum
 }
 
 type Mutation {
