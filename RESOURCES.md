@@ -22,6 +22,7 @@ https://github.com/jasonbahl/course-react-apollo-starter
 - *JSON Server*: https://github.com/typicode/json-server
 - *Apollo Error Handling*: https://www.apollographql.com/docs/react/features/error-handling/
 - *Apollo Pagination*: https://www.apollographql.com/docs/react/features/pagination/
+
 ## :pencil: Articles
 
 - *Anatomy of a GraphQL Query*: https://blog.apollographql.com/the-anatomy-of-a-graphql-query-6dffa9e9e747

@@ -4,22 +4,23 @@ import TaskCategorySelect from "../TaskCategorySelect"
 import gql from "graphql-tag"
 import { Mutation } from "react-apollo"
 import { TASKS_QUERY } from "../TaskList"
+import { TaskItemFragment } from "../TaskItem"
 
 const CREATE_TASK_MUTATION = gql`
   mutation CREATE_TASK($title: String!, $categoryId: ID!) {
     createTask(title: $title, categoryId: $categoryId) {
       task {
-        id
-        title
+        ...TaskItem
       }
     }
   }
+  ${TaskItemFragment}
 `
 
 class NewTaskForm extends Component {
   state = {
     title: "",
-    category: "",
+    category: undefined,
   }
 
   render() {
@@ -32,7 +33,32 @@ class NewTaskForm extends Component {
         onCompleted={() => {
           this.setState({
             title: "",
-            category: "",
+            category: undefined,
+          })
+        }}
+        update={(
+          cache,
+          {
+            data: {
+              createTask: { task },
+            },
+          }
+        ) => {
+          const query = {
+            query: TASKS_QUERY,
+            variables: { filters },
+          }
+
+          const { tasks } = cache.readQuery(query);
+
+          const newTasks = [...[task], ...tasks];
+
+          cache.writeQuery({
+            query: TASKS_QUERY,
+            variables: { filters },
+            data: {
+              tasks: newTasks,
+            },
           })
         }}
       >
@@ -45,9 +71,6 @@ class NewTaskForm extends Component {
                   title,
                   categoryId: category,
                 },
-                refetchQueries: [
-                  { query: TASKS_QUERY, variables: { filters } },
-                ],
               })
             }}
           >

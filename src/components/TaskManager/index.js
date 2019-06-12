@@ -7,7 +7,7 @@ import { Divider } from "antd"
 class TaskManager extends Component {
   state = {
     filters: {
-      category: null,
+      category: undefined,
       status: "ALL",
     },
   }

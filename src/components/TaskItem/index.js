@@ -51,7 +51,7 @@ class TaskItem extends React.Component {
       <Fragment>
         <Col xs={12} md={12}>
           <h3 style={{ textDecoration: titleStyle }}>{title}</h3>
-          <Tag color={category.color}>{category.name}</Tag>
+          {category ? <Tag color={category.color}>{category.name}</Tag> : null}
         </Col>
         <Col xs={12} md={12}>
           <Row type="flex" justify="end">
