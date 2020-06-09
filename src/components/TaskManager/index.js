@@ -4,11 +4,11 @@ import TaskFilters from "../TaskFilters/index.js"
 import TaskList from "../TaskList/index.js"
 
 const TaskManager = () => (
-  <Fragment>
-    <NewTaskForm />
-    <TaskFilters />
-    <TaskList />
-  </Fragment>
+    <Fragment>
+        <NewTaskForm/>
+        <TaskFilters/>
+        <TaskList/>
+    </Fragment>
 )
 
 export default TaskManager

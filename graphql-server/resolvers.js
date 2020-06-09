@@ -44,11 +44,12 @@ export const resolvers = {
         deleteTask: async (root, { id }) => {
             const task = await TasksModel.getTaskById(id);
             const deletedId = await TasksModel.deleteTask(id);
-            pubsub.publish( TASK_UPDATED, { task, deletedId });
+            pubsub.publish( TASK_DELETED, { taskDeleted: task, deletedId });
             return {
                 task,
                 deletedId
             }
+
         }
     },
     Task: {
@@ -61,10 +62,10 @@ export const resolvers = {
             subscribe: () => pubsub.asyncIterator(TASK_CREATED)
         },
         taskDeleted: {
-            subscribe: () => pubsub.asyncIterator(TASK_UPDATED)
+            subscribe: () => pubsub.asyncIterator(TASK_DELETED)
         },
         taskUpdated: {
-            subscribe: () => pubsub.asyncIterator(TASK_DELETED)
+            subscribe: () => pubsub.asyncIterator(TASK_UPDATED)
         }
     }
 };
